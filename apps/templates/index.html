@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/index.css" rel="stylesheet"></link>
+    <script src="/static/js/index.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" id="addr">
+    <input type="submit" value="过滤起始地址" id="filter" onclick="filter()">
+
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr style="background-color: orange">
+                <td>底价</td>
+                <td>原始价格</td>
+                <td>预计收益</td>
+                <td>全程公里</td>
+                <td>车辆</td>
+                <td>车长</td>
+                <td>油费</td>
+                <td>起始地</td>
+                <td>结束地</td>
+                <td>开始时间</td>
+                <td>结束时间</td>
+                <td>创建时间</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in data %}
+            <tr>
+                {% for d in item %}
+                <td>{{d}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+
+
+</body>
+</html>
