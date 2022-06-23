@@ -1,4 +1,4 @@
-import getInfo_common
+from apps.common import getInfo_common
 import smtplib
 from email.header import Header
 from email.mime.text import MIMEText
@@ -44,7 +44,7 @@ def send(title):
         obj.sendmail(sender, receiver, message.as_string())
 
 
-if __name__ == '__main__':
+def begin():
     while True:
         try:
             send('有合适订单')
