@@ -9,7 +9,7 @@ def filter():
     infoList = getInfo_common.getListInfo()
     strr = ''
     for info in infoList:
-        if ('平谷' in info[7] or '平谷' in info[8]) or info[2] > 500:
+        if ('平谷' in info[7] or '平谷' in info[8]) or info[2] > 1000:
             strr += '**************************************\n'
             strr += '起始地:{}\n'.format(info[7])
             strr += '结束地:{}\n'.format(info[8])
