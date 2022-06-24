@@ -33,7 +33,7 @@ def send(title):
     if strr != '':
         print(strr)
         sender = "1006573469@qq.com"
-        receiver = ['573587128@qq.com']   # 573587128@qq.com
+        receiver = ['jiangyanchen2@vip.qq.com']   # 573587128@qq.com   jiangyanchen2@vip.qq.com
         message = MIMEText(strr, 'plain', 'utf-8')
         message['From'] = Header('自动查询助手', 'utf-8')
         message['To'] = Header('有合适订单', 'utf-8')
