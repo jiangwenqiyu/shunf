@@ -1,6 +1,8 @@
 from . import api
 from flask import render_template, request, jsonify
 from apps.common import getInfo_common
+from apps.common.sendEmail import begin, test
+import threading
 
 
 
@@ -26,5 +28,10 @@ def config():
     return jsonify(code = '100')
 
 
+@api.route('/enable', methods = ['GET'])
+def enable():
+    t1 = threading.Thread(target=begin)
+    t1.start()
+    return jsonify(msg='success')
 
 

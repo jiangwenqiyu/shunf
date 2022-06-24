@@ -3,6 +3,7 @@ import smtplib
 from email.header import Header
 from email.mime.text import MIMEText
 import time
+import threading
 
 
 def filter():
@@ -32,7 +33,7 @@ def send(title):
     if strr != '':
         print(strr)
         sender = "1006573469@qq.com"
-        receiver = ['573587128@qq.com']
+        receiver = ['573587128@qq.com']   # 573587128@qq.com
         message = MIMEText(strr, 'plain', 'utf-8')
         message['From'] = Header('自动查询助手', 'utf-8')
         message['To'] = Header('有合适订单', 'utf-8')
@@ -53,3 +54,9 @@ def begin():
             pass
         finally:
             time.sleep(1800)
+
+def test():
+    while True:
+        print('fuck!!!!!!!!!!!!!!!!!')
+        time.sleep(3)
+
